@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#header nav {
+	max-width: none;
+}
+.wrapper {
+	max-width: none;
+	margin: 0;
+}
+section {
+	max-width: none;
+}

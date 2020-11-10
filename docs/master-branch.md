@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [2. Branches Overall](branches-overall.md)
+Previous: [2. Branches Overall](branches-overall.md)  
+Next: [4. Topic Branches](topic-branches.md)
 
 The master branch is the main branch of the repository.  
 Every commit on this branch (not including the initial commit of a history) should contain a presentable and functional

@@ -30,3 +30,4 @@ development of the topic has finished.
 
 * [1. Introduction](introduction.md)
 * [2. Branches Overall](branches-overall.md)
+* [3. Master Branch](master-branch.md)

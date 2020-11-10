@@ -2,11 +2,14 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [1. Introduction](introduction.md)
+Previous: [1. Introduction](introduction.md)  
+Next: [3. Master Branch](master-branch.md)
 
 The _"lifespan"_ of a branch is the period from the point when the branch is created to the point when it is deleted.  
 Branches must always be merged back into the branch they originally diverged from.  
-After a branch is merged, it must be deleted, ending the lifespan of it.
+After a branch is merged, it must be deleted, ending the lifespan of it.  
+The only branch where these rules do not apply is the master branch, which is explained in
+the next section [3. Master Branch](master-branch.md).
 
 Branch names consist of one or more _"components"_ that are separated by a single forward slash (`/`).  
 Branch names must comply with the following rules:

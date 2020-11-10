@@ -25,3 +25,7 @@ The development of the project is done on topic branches, where several differen
 Each type of topic branch is used for a different type of modification to the files of the repository.  
 These topic branches diverge from the master branch and then get merged back into the master branch after the
 development of the topic has finished.
+
+## Table of Contents ##
+
+* [1. Introduction](introduction.md)

@@ -34,3 +34,4 @@ development of the topic has finished.
 * [4. Topic Branches](topic-branches.md)
   * [4.1. Main Topic Branches](topic-branches/main-topics.md)
   * [4.2. Refactor Branches](topic-branches/refactor.md)
+  * [4.3. Cleanup Branches](topic-branches/cleanup.md)

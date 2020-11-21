@@ -42,7 +42,8 @@ Fix branches track important fixes or corrections of the project.
 This includes fixes to the behavior or public API of the project or changes to text.
 (like changing the wording or fixing grammatical errors)
 
-This branch type must not be used to fix internal formatting.
+This branch type must not be used to fix internal formatting.  
+Cleanup branches exist for this purpose. They are explained in the section [4.3. Cleanup Branches](cleanup.md).
 
 Like feature branches, backwards compatibility must not be broken, though with fixes this is a tricky topic.  
 If the behavior of a feature is greatly different than what was originally intended, "fixing" it might be considered

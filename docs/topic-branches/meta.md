@@ -2,7 +2,8 @@
 
 \[[Table of Contents](../index.md#table-of-contents)\]
 Up: [4. Topic Branches](../topic-branches.md)  
-Previous: [4.3. Cleanup Branches](cleanup.md)
+Previous: [4.3. Cleanup Branches](cleanup.md)  
+Next: [4.5. Staging Branches](staging.md)
 
 Meta branches' purpose is to track any additions, changes, fixes or cleanups to meta and community files like
 readme files, licenses, issue templates, etc.  

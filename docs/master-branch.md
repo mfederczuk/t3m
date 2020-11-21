@@ -11,8 +11,9 @@ state of the project.
 
 The master branch must be the HEAD branch of all remotes of the repository.
 
-A _"release commit"_ is a merge commit that is on the master branch and that has one or more _"release tags"_ pointing
-to it.  
+A _"release commit"_ is a merge commit that is on the master branch, that is produced by merging a staging branch
+and that has one or more _"release tags"_ pointing to it.
+Staging branches are explained in section [4.5. Staging Branches](topic-branches/staging.md).  
 A release tag is any tag that name starts with the lowercase letter `v`, followed by a valid version name of
 the versioning system that the repository uses.  
 Once a release tag is created, a new version with the same version name as the tag has encoded in its name must be

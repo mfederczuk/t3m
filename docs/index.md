@@ -36,3 +36,4 @@ development of the topic has finished.
   * [4.2. Refactor Branches](topic-branches/refactor.md)
   * [4.3. Cleanup Branches](topic-branches/cleanup.md)
   * [4.4. Meta Branches](topic-branches/meta.md)
+  * [4.5. Staging Branches](topic-branches/staging.md)

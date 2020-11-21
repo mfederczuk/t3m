@@ -1,0 +1,36 @@
+#!/bin/bash
+# -*- sh -*-
+# vim: set syntax=sh
+# code: language=shellscript
+
+# searches through all markdown files to check for some common mistakes
+
+_word_pattern() {
+	printf '^(%s)$|[^[:alnum:]](%s)[^[:alnum:]]' "$1" "$1"
+}
+
+readonly patterns=(
+	"$(_word_pattern 'you')" # specifications should avoid references the reader
+	                         # directly
+	"$(_word_pattern 'branche([^s]|$)')" # common mistake when trying to turn
+	                                     # plural "branches" to singluar "branch"
+	'\\$' # do not use a backslash to terminate lines - use two spaces
+	'  [[:space:]]+$' # no whitespace after two spaces
+	'^=+$' # do not use equals characters for headings
+	'^-{1,2}$' # no line with only one or two dashes
+	'^-{4,}$' # horizontal separators should only use three dashes
+	$'[^\t[:print:]]' # only use printable ASCII characters and tab
+	'^.{181,}$' # no lines longer than 180 characters
+	"$(_word_pattern 'can([[:space:]]*not)?')" # no 'can'/'cannot'/'can not'
+)
+
+declare full_pattern
+printf -v full_pattern '(%s)|' "${patterns[@]}"
+full_pattern="${full_pattern%|}"
+readonly full_pattern
+
+cd "$(dirname "$0")" &&
+	! git -P diff --staged --name-only -z 'docs/**.md' |
+		xargs -0 grep --color=auto -EinH \
+			"$full_pattern" \
+			--exclude='gfdl.md'

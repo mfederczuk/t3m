@@ -27,3 +27,7 @@ The first component of the branch name must be the _"distinguishing component"_,
 the topic branch.  
 The rest of the name after the distinguishing component is chosen by the repository owner or, if the owner allows it,
 by the branch creator.
+
+All types of topic branches are defined in the following subsections:
+
+* [4.1. Main Topic Branches](topic-branches/main-topics.md)

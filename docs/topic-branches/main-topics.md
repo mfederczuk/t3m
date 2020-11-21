@@ -8,7 +8,8 @@ Next: [4.2. Refactor Branches](refactor.md)
 Main topic branches is a subcategory of topic branches.  
 These branches are the only topic branches that may alter the behavior or public API of the project.
 
-The main topic branches must not be used to change meta and community files like readme files, licenses, etc.
+The main topic branches must not be used to change meta and community files like readme files, licenses, etc.  
+Meta branches, explained in section [4.4. Meta Branches](meta.md), are used for such things.
 
 ## Feature Branches ##
 

@@ -2,7 +2,8 @@
 
 \[[Table of Contents](../index.md#table-of-contents)\]
 Up: [4. Topic Branches](../topic-branches.md)  
-Previous: [4.2. Refactor Branches](refactor.md)
+Previous: [4.2. Refactor Branches](refactor.md)  
+Next: [4.4. Meta Branches](meta.md)
 
 Cleanup branches are very simple branches that just exist to clean up the project.  
 They may be used to fix internal formatting, remove unused or unnecessary files and to remove files that have been

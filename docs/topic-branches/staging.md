@@ -17,8 +17,12 @@ The rest of the name must be the name of the version that is planned to be relea
 
 For example, a staging branch that prepares to release version `1.2.5-rc01`, would be called `staging/1.2.5-rc01`.
 
+The following paragraph uses a term which is defined in the next subsection:
+
+* [4.5.1. Development Phases](development-phases.md)
+
 Staging Branches must only be merged if at least one of the main topic branches has been merged into the master branch
-between the latest release commit (or the begin of the history if no release commit has been created yet) and now.
+in the current development phase.
 (See sections [3. Master Branch](../master-branch.md) and [4.1. Main Topic Branches](main-topics.md))  
 If only refactor branches, cleanup branches or meta branches have been merged, staging branches must not be merged.
 (See sections [4.2. Refactor Branches](refactor.md),

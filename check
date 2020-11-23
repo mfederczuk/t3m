@@ -3,34 +3,134 @@
 # vim: set syntax=sh
 # code: language=shellscript
 
-# searches through all markdown files to check for some common mistakes
+# Script to search for writing & formatting violations and other mistakes.
+# Copyright (C) 2020  Michael Federczuk
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+if ! cd "$(dirname "$0")"; then
+	exit
+fi
+
+readonly local_markdownlint='node_modules/.bin/markdownlint'
+
+declare exc
+
+if [ ! -x "$local_markdownlint" ]; then
+	if ! command -v npm; then
+		echo "$0: npm: program missing"
+		exit 27
+	fi
+
+	npm install
+	exc=$?
+	if ((exc != 0)); then
+		exit $exc
+	fi
+fi
+
+readonly word_sep_pattern='[^[:alnum:]]+'
 _word_pattern() {
-	printf '^(%s)$|[^[:alnum:]](%s)[^[:alnum:]]' "$1" "$1"
+	local out='' arg words inside word
+
+	for arg in "$@"; do
+		read -ra words <<< "$arg"
+
+		inside=''
+		for word in "${words[@]}"; do
+			inside+="($word)$word_sep_pattern"
+		done
+		inside="${inside%"$word_sep_pattern"}"
+
+		out+="(^|$word_sep_pattern)$inside($word_sep_pattern|$)|"
+	done
+
+	out="${out%'|'}"
+	printf '%s' "$out"
 }
 
 readonly patterns=(
-	"$(_word_pattern 'you')" # specifications should avoid references the reader
-	                         # directly
-	"$(_word_pattern 'branche([^s]|$)')" # common mistake when trying to turn
-	                                     # plural "branches" to singluar "branch"
-	'\\$' # do not use a backslash to terminate lines - use two spaces
-	'  [[:space:]]+$' # no whitespace after two spaces
+	# === writing guidelines === #
+
+	"$(_word_pattern i my mine "i'm" myself me)" # do not refer to the writer
+	# do not refer to the reader
+	"$(_word_pattern you your yours "you're" yourself)"
+	"$(_word_pattern 'for example')" # do not use "for example"
+	"$(_word_pattern 'that means')" # do not use "that means"
+	# do not use "forbidden" or "not allowed"
+	"$(_word_pattern forbidden 'not allowed')"
+	"$(_word_pattern shall 'shall not')" # do not use "shall" or "shall not"
+	# do not use "can", "cannot" or "can not"
+	"$(_word_pattern can cannot 'can not')"
+	'etc\.\)' # do not use "etc." in parenthesis
+	'\.{3}[^)]' # do not use an ellipsis outside of parenthesis
+
+	# === formatting guidlines === #
+
+	'\\$' # do not use a backslash to terminate lines
+	'  [[:space:]]+$' # no trailing whitespace after two spaces
+	'[^[:space:]][[:space:]]$' # no singular whitespace character at the end
+	'[^ [:alnum:][:punct:]]+$' # no trailing whitespace that isn't space
+	'^[[:space:]]+$' # no lines just containing whitespace
+	# no letters or digits after column 80
+	'^[^[].{79}[^[:alnum:]]*[[:alnum:]].*$'
+	'^.{181,}$' # no lines longer than 180
 	'^=+$' # do not use equals characters for headings
-	'^-{1,2}$' # no line with only one or two dashes
-	'^-{4,}$' # horizontal separators should only use three dashes
-	$'[^\t[:print:]]' # only use printable ASCII characters and tab
-	'^.{181,}$' # no lines longer than 180 characters
-	"$(_word_pattern 'can([[:space:]]*not)?')" # no 'can'/'cannot'/'can not'
+	'^#.*?[^#]$' # headings are formatted with octothorpes on both sides
+	'^-{1,2}$' # no line with just one or two dashes
+	'^-{4,}$' # horizontal separators must have exactly three dashes
+	# strong emphasis is formatted with two asterisks on both sides
+	'_\*|\*_' '__'
+	'\*"[^"]*"\*' # explicitly called out names and inline quotes ...
+	'[^[:print:]]' # files must only contain printable characters, spaces
+
+	# === other === #
+
+	# common mistake when trying to turn plural "branches" to singluar "branch"
+	"$(_word_pattern branche)"
 )
 
 declare full_pattern
 printf -v full_pattern '(%s)|' "${patterns[@]}"
-full_pattern="${full_pattern%|}"
+full_pattern="${full_pattern%'|'}"
 readonly full_pattern
 
-cd "$(dirname "$0")" &&
-	! git -P diff --staged --name-only -z 'docs/**.md' |
-		xargs -0 grep --color=auto -EinH \
-			"$full_pattern" \
-			--exclude='gfdl.md'
+declare tmpfile exc tmp_exc
+
+if tmpfile="$(mktemp)" &&
+   find 'docs' \
+	   -name '*.md' \
+	   -not -name 'gfdl.md' \
+	   -print0 > "$tmpfile"; then
+
+	! xargs -0 grep --color=auto -EinHr "$full_pattern" < "$tmpfile"
+	exc=$?
+
+	xargs -0 "$local_markdownlint" < "$tmpfile"
+	tmp_exc=$?
+
+	if ((exc == 0)); then
+		exc=$tmp_exc
+	fi
+else
+	exc=$?
+fi
+
+rm -f "$tmpfile"
+tmp_exc=$?
+if ((exc == 0)); then
+	exc=$tmp_exc
+fi
+
+exit $exc

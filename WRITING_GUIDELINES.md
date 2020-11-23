@@ -32,6 +32,8 @@ mistake, create an issue about it.
   * (optional) What the branche(es) are not for /
     What the branch(es) must not do
   * The lifetime of the branch(es)
+  * (optional) Who is allowed to modify the branch(es) and how many people are
+    allowed to work on it at the same time
   * (optional) Attributes of commits on the branch(es)
   * The name of the branche(es)
   * Anything else

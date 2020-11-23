@@ -25,6 +25,9 @@ There are several issue templates to help you contribute suggestions, requests,
 reports or questions. While it is recommended to use these templates, it's not
 mandatory.
 
+When contributing text, make sure to follow the
+[Writing & Formatting Guidelines](WRITING_GUIDELINES.md).
+
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning 2.0.0"
 [Keep a Changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog 1.0.0"
 [Creating a new issue]: https://github.com/mfederczuk/t3m/issues/new/choose "Create new Issue"

@@ -13,7 +13,9 @@ mistake, create an issue about it.
 * Do not refer to the writer, i.e.: do not use "I", "my", etc.
 * Do not refer to the reader, i.e.: do not use "you", "your", etc.
 * Do not use "for example", use "e.g.:" instead
+  (except when it is used to introduce a new paragraph)
 * Do not use "that means", use "i.e.:" instead
+  (except when it is used to introduce a new paragraph)
 * Do not use "forbidden" or "not allowed", use "must not" instead
 * Do not use "shall" or "shall not", use "must" or "must not" instead
 * Do not use "can", "cannot" or "can not", use "may" or "may not" instead

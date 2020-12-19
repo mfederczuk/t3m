@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [3. Master Branch](master-branch.md)
+Previous: [3. Master Branch](master-branch.md)  
+Next: [5. Development Branch](development-branch.md)
 
 Topic branches is a category of branches that track the development process of a single topic, like a new feature or
 a bug fix.

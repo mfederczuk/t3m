@@ -2,7 +2,8 @@
 
 \[[Table of Contents](../index.md#table-of-contents)\]
 Up: [4.5. Staging Branches](staging.md)  
-Previous: [4.5. Staging Branches](staging.md)
+Previous: [4.5. Staging Branches](staging.md)  
+Next: [5. Development Branch](../development-branch.md)
 
 The term _"development phase"_ refers to either:
 

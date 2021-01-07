@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"declarationDir": "types",
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"noImplicitAny": true,
+		"outDir": "out",
+		"removeComments": true,
+		"strict": true,
+		"target": "ES2020"
+	},
+	"include": ["check.ts"],
+	"exclude": ["node_modules"]
+}

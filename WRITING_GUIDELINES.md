@@ -4,7 +4,7 @@ This file lists rules and guidelines for the writing and formatting style that
 must be followed for the specification of **t3m**.
 
 The script [`check`](check) tries to find and report violations of these rules
-and also other some other mistakes.  
+and also some other mistakes.  
 If you think that the script reported something that isn't a violation or
 mistake, create an issue about it.
 
@@ -21,9 +21,13 @@ mistake, create an issue about it.
 * Do not use "can", "cannot" or "can not", use "may" or "may not" instead
 * Only add a link/reference once in each section it appears
   (Navigation links do not count)
+* Do not write whitespace before punctuation, but write whitespace after
+  punctuation
+* Write ellipsis (multiple consecutive periods) with exactly three consecutive
+  periods
+* Write ellipsis without whitespace between the periods
 * When listing and indeterminate amount of things:
-  * Use an ellipsis (three consecutive periods) when the list is inside
-    parenthesis
+  * Use an ellipsis when the list is inside parenthesis
   * Use "etc." when the list is outside of parenthesis
 * Info/Specifications for branches should follow the same structure:
   * Description of the branch(es)
@@ -57,3 +61,4 @@ mistake, create an issue about it.
 * Explicitly called out names and inline quotes are put into quotes and
   formatted in regular emphasis (quotes are included in emphasis) (_\_"like this"\__)
 * Files must only contain printable characters, spaces and newlines
+* Files must always end with exactly one newline character

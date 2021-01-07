@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 # -*- sh -*-
 # vim: set syntax=sh
 # code: language=shellscript
 
 # Script to search for writing & formatting violations and other mistakes.
-# Copyright (C) 2020  Michael Federczuk
+# Copyright (C) 2021  Michael Federczuk
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,118 +19,18 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-if ! cd "$(dirname "$0")"; then
-	exit
-fi
+root_dir_path="$(dirname "$0")" || exit
+readonly root_dir_path
 
-readonly local_markdownlint='node_modules/.bin/markdownlint'
+readonly local_ts_node_path="$root_dir_path/node_modules/.bin/ts-node"
 
-declare exc
-
-if [ ! -x "$local_markdownlint" ]; then
-	if ! command -v npm; then
-		echo "$0: npm: program missing"
+if [ ! -x "$local_ts_node_path" ]; then
+	if ! command -v npm > '/dev/null'; then
+		echo "./check: npm: program missing" >&2
 		exit 27
 	fi
 
-	npm install
-	exc=$?
-	if ((exc != 0)); then
-		exit $exc
-	fi
+	npm install || exit
 fi
 
-readonly word_sep_pattern='[^[:alnum:]]+'
-_word_pattern() {
-	local out='' arg words inside word
-
-	for arg in "$@"; do
-		read -ra words <<< "$arg"
-
-		inside=''
-		for word in "${words[@]}"; do
-			inside+="($word)$word_sep_pattern"
-		done
-		inside="${inside%"$word_sep_pattern"}"
-
-		out+="(^|$word_sep_pattern)$inside($word_sep_pattern|$)|"
-	done
-
-	out="${out%'|'}"
-	printf '%s' "$out"
-}
-
-readonly patterns=(
-	# === writing guidelines === #
-
-	"$(_word_pattern i my mine "i'm" myself me)" # do not refer to the writer
-	# do not refer to the reader
-	"$(_word_pattern you your yours "you're" yourself)"
-	"$(_word_pattern '.for example')" # do not use "for example"
-	"$(_word_pattern '.that means')" # do not use "that means"
-	# do not use "forbidden" or "not allowed"
-	"$(_word_pattern forbidden 'not allowed')"
-	"$(_word_pattern shall 'shall not')" # do not use "shall" or "shall not"
-	# do not use "can", "cannot" or "can not"
-	"$(_word_pattern can cannot 'can not')"
-	'etc\.\)' # do not use "etc." in parenthesis
-	'\.{3}[^)]' # do not use an ellipsis outside of parenthesis
-
-	# === formatting guidlines === #
-
-	'\\$' # do not use a backslash to terminate lines
-	'  [[:space:]]+$' # no trailing whitespace after two spaces
-	'[^[:space:]][[:space:]]$' # no singular whitespace character at the end
-	'[^ [:alnum:][:punct:]]+$' # no trailing whitespace that isn't space
-	'^[[:space:]]+$' # no lines just containing whitespace
-	# no letters or digits after column 80
-	'^[^[].{79}[^[:alnum:]]*[[:alnum:]].*$'
-	'^.{181,}$' # no lines longer than 180
-	'^=+$' # do not use equals characters for headings
-	'^#.*?[^#]$' # headings are formatted with octothorpes on both sides
-	'^-{1,2}$' # no line with just one or two dashes
-	'^-{4,}$' # horizontal separators must have exactly three dashes
-	# strong emphasis is formatted with two asterisks on both sides
-	'_\*|\*_' '__'
-	'\*"[^"]*"\*' # explicitly called out names and inline quotes ...
-	'[^[:print:]]' # files must only contain printable characters, spaces
-
-	# === other === #
-
-	# common mistake when trying to turn plural "branches" to singluar "branch"
-	"$(_word_pattern branche)"
-)
-
-declare full_pattern
-printf -v full_pattern '(%s)|' "${patterns[@]}"
-full_pattern="${full_pattern%'|'}"
-readonly full_pattern
-
-declare tmpfile exc tmp_exc
-
-if tmpfile="$(mktemp)" &&
-   find 'docs' \
-	   -name '*.md' \
-	   -not -name 'gfdl.md' \
-	   -print0 > "$tmpfile"; then
-
-	! xargs -0 grep --color=auto -EinHr "$full_pattern" < "$tmpfile"
-	exc=$?
-
-	xargs -0 "$local_markdownlint" < "$tmpfile"
-	tmp_exc=$?
-
-	if ((exc == 0)); then
-		exc=$tmp_exc
-	fi
-else
-	exc=$?
-fi
-
-rm -f "$tmpfile"
-tmp_exc=$?
-if ((exc == 0)); then
-	exc=$tmp_exc
-fi
-
-exit $exc
+"$local_ts_node_path" "$root_dir_path/check.ts"

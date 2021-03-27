@@ -1,4 +1,4 @@
-# t3m Git Branching System Family #
+# t3m Git Branching System #
 
 [version_shield]: https://img.shields.io/badge/version-N%2FA-blue.svg
 ![version: N/A][version_shield]
@@ -6,9 +6,9 @@
 
 ## About ##
 
-**t3m** is a family of Git branching systems, which was based off of and
-inspired by [Vincent Driessen's "A successful Git branching model"] (git-flow)
-and [GitHub Flow].
+**t3m** is a Git branching system, which was based off of and inspired by
+[Vincent Driessen's "A successful Git branching model"] (**git-flow**) and
+**[GitHub Flow]**.
 
 This repository holds the specification for **t3m**.
 
@@ -22,4 +22,4 @@ contribute to this project.
 
 ## License ##
 
-[GNU FDLv1.3+](LICENSE)
+[GNU FDL-1.3](LICENSE)

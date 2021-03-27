@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [4. Topic Branches](topic-branches.md)
+Previous: [4. Topic Branches](topic-branches.md)  
+Next: [6. Parallel Versions Variant](parallel-versions-variant.md)
 
 The development branch is a combination of all main topic branches, the refactor branches and the cleanup branches.
 (See sections [4.1. Main Topic Branches](topic-branches/main-topics.md),

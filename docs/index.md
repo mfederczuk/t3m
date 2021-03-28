@@ -41,3 +41,4 @@ development of the topic has finished.
 * [5. Development Branch](development-branch.md)
 * [6. Parallel Versions Variant](parallel-versions-variant.md)
 * [7. Undefined Branches](undefined-branches.md)
+* [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)

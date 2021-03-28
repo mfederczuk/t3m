@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [6. Parallel Versions Variant](parallel-versions-variant.md)
+Previous: [6. Parallel Versions Variant](parallel-versions-variant.md)  
+Next: [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)
 
 Undefined branches are branches that have no rules applied to them.  
 They may be used for any reason, in any way.

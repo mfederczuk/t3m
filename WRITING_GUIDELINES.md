@@ -30,17 +30,17 @@ mistake, create an issue about it.
   * Use an ellipsis when the list is inside parenthesis
   * Use "etc." when the list is outside of parenthesis
 * Info/Specifications for branches should follow the same structure:
-  * Description of the branch(es)
-  * Usage of the branche(es) / What the branch(es) is/are used for /
-    What the branche(es) must do
-  * (optional) What the branche(es) are not for /
-    What the branch(es) must not do
-  * The lifetime of the branch(es)
-  * (optional) Who is allowed to modify the branch(es) and how many people are
-    allowed to work on it at the same time
-  * (optional) Attributes of commits on the branch(es)
-  * The name of the branche(es)
-  * Anything else
+  1. Description of the branch(es)
+  2. Usage of the branch(es) / What the branch(es) is/are used for /
+     What the branch(es) must do
+  3. (optional) What the branch(es) are not for /
+     What the branch(es) must not do
+  4. The lifetime of the branch(es)
+  5. (optional) Who is allowed to modify the branch(es) and how many people are
+     allowed to work on it at the same time
+  6. (optional) Attributes of commits on the branch(es)
+  7. The name of the branch(es)
+  8. Anything else
 
 ## Formatting Guidelines ##
 

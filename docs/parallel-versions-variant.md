@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [5. Development Branch](development-branch.md)
+Previous: [5. Development Branch](development-branch.md)  
+Next: [7. Undefined Branches](undefined-branches.md)
 
 The **t3m Parallel Versions** system (or just **t3m Parallel**) is a variant of the regular **t3m** system.  
 The repository owner must choose between using the variant or the regular system, as both systems are mutually exclusive;

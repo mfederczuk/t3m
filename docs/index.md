@@ -40,3 +40,4 @@ development of the topic has finished.
     * [4.5.1. Development Phases](topic-branches/development-phases.md)
 * [5. Development Branch](development-branch.md)
 * [6. Parallel Versions Variant](parallel-versions-variant.md)
+* [7. Undefined Branches](undefined-branches.md)

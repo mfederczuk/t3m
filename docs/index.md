@@ -33,3 +33,4 @@ development of the topic has finished.
 * [3. Master Branch](master-branch.md)
 * [4. Topic Branches](topic-branches.md)
   * [4.1. Main Topic Branches](topic-branches/main-topics.md)
+  * [4.2. Refactor Branches](topic-branches/refactor.md)

@@ -31,3 +31,4 @@ by the branch creator.
 All types of topic branches are defined in the following subsections:
 
 * [4.1. Main Topic Branches](topic-branches/main-topics.md)
+* [4.2. Refactor Branches](topic-branches/refactor.md)

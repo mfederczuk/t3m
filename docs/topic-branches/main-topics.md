@@ -2,7 +2,8 @@
 
 \[[Table of Contents](../index.md#table-of-contents)\]
 Up: [4. Topic Branches](../topic-branches.md)  
-Previous: [4. Topic Branches](../topic-branches.md)
+Previous: [4. Topic Branches](../topic-branches.md)  
+Next: [4.2. Refactor Branches](refactor.md)
 
 Main topic branches is a subcategory of topic branches.  
 These branches are the only topic branches that may alter the behavior or public API of the project.
@@ -29,7 +30,9 @@ This is the only type of topic branch that may break backwards compatibility.
 
 In addition to behavior or API changes, change branches may also include new additions, behavior fixes or changes to
 the internal project structure, but only if these additional non-behavior changes are not the primary focus of
-the branch.
+the branch.  
+In the case of altering the internal project structure, refactor branches, explained in
+section [4.2. Refactor Branches](refactor.md), must be used for it.
 
 The distinguishing component of this type must be `change`.
 

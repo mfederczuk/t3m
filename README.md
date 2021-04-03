@@ -6,11 +6,10 @@
 
 ## About ##
 
-**t3m** is a Git branching system, which was based off of and inspired by
-[Vincent Driessen's "A successful Git branching model"] (**git-flow**) and
-**[GitHub Flow]**.
+**t3m** is a **Git** branching system, which was based off of and inspired by other popular branching models and systems
+like [Vincent Driessen's "A successful Git branching model"] (**git-flow**) and **[GitHub Flow]**.
 
-This repository holds the specification for **t3m**.
+This repository holds the specification document for **t3m** - read it [here](docs/index.md).
 
 [Vincent Driessen's "A successful Git branching model"]: https://nvie.com/posts/a-successful-git-branching-model "A successful Git branching model &raquo; nvie.com"
 [GitHub Flow]: https://guides.github.com/introduction/flow/ "Understanding the GitHub flow &middot; GitHub Guides"
@@ -22,4 +21,4 @@ contribute to this project.
 
 ## License ##
 
-[GNU FDL-1.3](LICENSE)
+[GNU FDL v1.3](LICENSE)

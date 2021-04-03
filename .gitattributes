@@ -1,5 +1,3 @@
-assets/css/style.scss linguist-detectable=false
-check                 linguist-detectable=false
-**.ts                 linguist-detectable=false
-docs/**               linguist-documentation=false
-docs/**.md            linguist-detectable=true
+*             linguist-detectable=false
+/docs/**      linguist-documentation=false
+/docs/**/*.md linguist-detectable=true

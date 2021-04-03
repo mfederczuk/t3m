@@ -13,9 +13,9 @@ mistake, create an issue about it.
 * Do not refer to the writer, i.e.: do not use "I", "my", etc.
 * Do not refer to the reader, i.e.: do not use "you", "your", etc.
 * Do not use "for example", use "e.g.:" instead
-  (except when it is used to introduce a new paragraph)
+  (except when it is used to introduce a sentence)
 * Do not use "that means", use "i.e.:" instead
-  (except when it is used to introduce a new paragraph)
+  (except when it is used to introduce a sentence)
 * Do not use "forbidden" or "not allowed", use "must not" instead
 * Do not use "shall" or "shall not", use "must" or "must not" instead
 * Do not use "can", "cannot" or "can not", use "may" or "may not" instead
@@ -47,8 +47,8 @@ mistake, create an issue about it.
 * Do not use backslashes for line breaks, use two consecutive spaces instead.  
   No other trailing whitespace other than that
 * No lines just containing whitespace
-* No letters or digits after column 80 (footnotes are the exception)
-* No lines longer than 180 (footnotes included)
+* No letters or digits after column 120 (footnotes are the exception)
+* No lines longer than 200 (footnotes included)
 * Do not use equal characters or dashes for headings, only use octothorpes (#)
 * Headings are formatted with octothorpes on both sides
 * No lines with just one or two dashes

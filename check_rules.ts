@@ -49,8 +49,8 @@ const rules: {
 	"do not refer to the writer": wordPatterns(/i(?!\.e\.:)/im, "my", "mine", "i'm", "myself", "me"),
 	"do not refer to the reader": wordPatterns("you", "your", "yours", "you're", "yourself"),
 
-	"do not use \"for example\" (except at the beginning of paragraphs)": wordPatterns(/(?<!^)for example/im),
-	"do not use \"that means\" (except at the beginning of paragraphs)":  wordPatterns(/(?<!^)that means/im),
+	"do not use \"for example\" (except at the beginning of sentences)": wordPatterns(/(?<!^)for example/im),
+	"do not use \"that means\" (except at the beginning of sentences)":  wordPatterns(/(?<!^)that means/im),
 
 	"do not use \"forbidden\"":                      wordPatterns("forbidden"),
 	"do not use \"shall\" or \"shall not\"":         wordPatterns("shall", "shall not"),
@@ -74,8 +74,8 @@ const rules: {
 	// TODO no trailing whitespace that isn't space
 	"no lines just containing whitespace":         /^\s+$/m,
 
-	"no letters or digits after column 80": /^.{80}\w+$/imu,
-	"no lines longer than 180":             /^.{180}.+$/m,
+	"no letters or digits after column 120": /^(?!\[).{120}((\s+\w+)+|\w+(\s+\w+)*)/,
+	"no lines longer than 200":              /^.{200}.+$/m,
 
 	"do not use equals characters for headings":             /^=+$/m,
 	"headings are formatted with octothorpes on both sides": /^#[^#]*?(?!#)$/m, // this isn't really optimal, but

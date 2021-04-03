@@ -1,0 +1,47 @@
+#!/bin/sh
+# -*- sh -*-
+# vim: set syntax=sh
+# code: language=shellscript
+
+# Script to install a Git pre commit hook that executes the `check` script.
+# Copyright (C) 2021  Michael Federczuk
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+if [ $# -gt 0 ]; then
+	echo "$0: too many arguments: $#" >&2
+	echo "usage: $0" >&2
+	exit 4
+fi
+
+root_dir_path="$(dirname "$0")" || exit
+readonly root_dir_path
+
+pre_commit_hook_path="$root_dir_path/${GIT_DIR:-".git"}/hooks/pre-commit"
+pre_commit_hook_path="$(realpath --relative-to=. -ms "$pre_commit_hook_path")" || exit
+readonly pre_commit_hook_path
+
+if [ -e "$pre_commit_hook_path" ]; then
+	echo "Path '$pre_commit_hook_path' already exists. Please install the hook manually" >&2
+	exit 32
+fi
+
+# shellcheck disable=1068
+printf '%s\n' '#!/bin/sh'            \
+              '# -*- sh -*-'         \
+              '# vim: set syntax=sh' \
+              ''                     \
+              './check'              > "$pre_commit_hook_path" &&
+	chmod =755 "$pre_commit_hook_path" &&
+	echo "Successfully installed the check script Git hook" >&2

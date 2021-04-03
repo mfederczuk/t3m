@@ -19,6 +19,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+if [ $# -gt 0 ]; then
+	echo "$0: too many arguments: $#" >&2
+	echo "usage: $0" >&2
+	exit 4
+fi
+
 root_dir_path="$(dirname "$0")" || exit
 readonly root_dir_path
 
@@ -26,7 +32,7 @@ readonly local_ts_node_path="$root_dir_path/node_modules/.bin/ts-node"
 
 if [ ! -x "$local_ts_node_path" ]; then
 	if ! command -v npm > '/dev/null'; then
-		echo "./check: npm: program missing" >&2
+		echo "$0: npm: program missing" >&2
 		exit 27
 	fi
 

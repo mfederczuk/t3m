@@ -29,3 +29,4 @@ development of the topic has finished.
 ## Table of Contents ##
 
 * [1. Introduction](introduction.md)
+* [2. Branches Overall](branches-overall.md)

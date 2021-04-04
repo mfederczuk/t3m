@@ -2,7 +2,8 @@
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [Top](index.md)
+Previous: [Top](index.md)  
+Next: [2. Branches Overall](branches-overall.md)
 
 **t3m** is a **Git** branching system that was based off of and inspired by other popular branching models and systems
 like [Vincent Driessen's "A successful Git branching model"] (**git-flow**) and **[GitHub Flow]**.

@@ -21,4 +21,4 @@ contribute to this project.
 
 ## License ##
 
-[GNU FDL v1.3](LICENSE)
+[GNU FDL v1.3](licenses/GNU-FDL-v1.3.txt)

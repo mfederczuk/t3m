@@ -31,6 +31,10 @@ If you think that the script reported something that isn't a violation or mistak
   6. (optional) Attributes of commits on the branch(es)
   7. The name of the branch(es)
   8. Anything else
+* Use "is" and related words for defining terms and concepts, and to describe the fundamental behavior of other concepts,
+  systems, or anything else
+* Use "must" and related words for the rules, regulations and requirements that must be followed to be compliant to the
+  specification
 
 ## Formatting Guidelines ##
 

@@ -6,7 +6,7 @@
 
 ## About ##
 
-**t3m** is a **Git** branching system, which was based off of and inspired by other popular branching models and systems
+**t3m** is a **Git** branching system that was based off of and inspired by other popular branching models and systems
 like [Vincent Driessen's "A successful Git branching model"] (**git-flow**) and **[GitHub Flow]**.
 
 This repository holds the specification document for **t3m** - read it [here](docs/index.md).
@@ -16,8 +16,7 @@ This repository holds the specification document for **t3m** - read it [here](do
 
 ## Contributing ##
 
-Read through the [t3m Contribution Guidelines](CONTRIBUTING.md) if you want to
-contribute to this project.
+Read through the [t3m Contribution Guidelines](CONTRIBUTING.md) if you want to contribute to this project.
 
 ## License ##
 

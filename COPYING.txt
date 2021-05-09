@@ -1,0 +1,8 @@
+The t3m specification document, which is located and includes all files in the 'docs' directory and its subdirectories,
+as well as all other Markdown files, which are all files whose names end with '.md', are licensed under:
+
+        Creative Commons Attribution Share Alike 4.0 International (licenses/CC-BY-SA-4.0.txt)
+
+All other files that do not match any of the before laid out rules are licensed under:
+
+        GNU General Public License v3.0 or later (licenses/GNU-GPL-v3.0.txt)

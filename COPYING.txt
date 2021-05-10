@@ -1,5 +1,6 @@
 The t3m specification document, which is located and includes all files in the 'docs' directory and its subdirectories,
-as well as all other Markdown files, which are all files whose names end with '.md', are licensed under:
+all other Markdown files, which are files whose names end with '.md', and the GitHub preview image, which is located at
+'.github/preview.png', are all licensed under:
 
         Creative Commons Attribution Share Alike 4.0 International (licenses/CC-BY-SA-4.0.txt)
 

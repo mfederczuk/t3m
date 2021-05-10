@@ -10,7 +10,8 @@ version 1.0.0-rc01 (released {{DATE}}).
 Copyright &copy; 2021 Michael Federczuk
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
-To view a copy of this license, visit <https://creativecommons.org/licenses/by-sa/4.0/> or send a letter to
+To view a copy of this license, refer to the section entitled "Creative Commons Attribution-ShareAlike 4.0 International",
+visit <https://creativecommons.org/licenses/by-sa/4.0/> or send a letter to
 Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ---
@@ -42,3 +43,4 @@ development of the topic has finished.
 * [6. Parallel Versions Variant](parallel-versions-variant.md)
 * [7. Undefined Branches](undefined-branches.md)
 * [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)
+* [Appendix A. Creative Commons Attribution-ShareAlike 4.0 International](cc-by-sa-4.0.md)

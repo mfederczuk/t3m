@@ -138,7 +138,7 @@ function readdirRecursiveSync(rootPath: PathLike): string[] {
 
 const filepaths = readdirRecursiveSync("docs")
 	.filter((filepath) => filepath.endsWith(".md"))
-	.filter((filepath) => !filepath.endsWith("gfdl.md"));
+	.filter((filepath) => !filepath.endsWith("cc-by-sa-4.0.md"));
 
 //#endregion
 

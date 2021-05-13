@@ -25,7 +25,8 @@ if [ $# -gt 0 ]; then
 	exit 4
 fi
 
-root_dir_path="$(dirname -- "$0")" || exit
+{ root_dir_path="$(dirname -- "$0")" &&
+	  root_dir_path="$(realpath --relative-to=. -ms -- "$root_dir_path")"; } || exit
 readonly root_dir_path
 
 readonly local_ts_node_path="$root_dir_path/node_modules/.bin/ts-node"
@@ -39,4 +40,8 @@ if [ ! -x "$local_ts_node_path" ]; then
 	npm install || exit
 fi
 
-"$local_ts_node_path" "$root_dir_path/check.ts"
+check_main_path="$(realpath --relative-to=. -ms -- "$root_dir_path/check-src/main.ts")" || exit
+docs_dir_path="$(realpath --relative-to=. -ms -- "$root_dir_path/docs")" || exit
+readonly check_main_path docs_dir_path
+
+"$local_ts_node_path" "$check_main_path" "$docs_dir_path"

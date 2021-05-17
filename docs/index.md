@@ -41,4 +41,5 @@ development of the topic has finished.
 * [6. Parallel Versions Variant](parallel-versions-variant.md)
 * [7. Undefined Branches](undefined-branches.md)
 * [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)
-* [Appendix A. Creative Commons Attribution-ShareAlike 4.0 International](cc-by-sa-4.0.md)
+* [Appendix A. Examples](examples.md)
+* [Appendix B. Creative Commons Attribution-ShareAlike 4.0 International](cc-by-sa-4.0.md)

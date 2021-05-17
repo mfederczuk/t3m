@@ -1,8 +1,8 @@
-# Appendix A. Creative Commons Attribution-ShareAlike 4.0 International #
+# Appendix B. Creative Commons Attribution-ShareAlike 4.0 International #
 
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
-Previous: [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)
+Previous: [Appendix A. Examples](examples.md)
 
 _Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice.
 Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons

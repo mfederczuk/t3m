@@ -3,7 +3,7 @@
 \[[Table of Contents](index.md#table-of-contents)\]
 Up: [Top](index.md)  
 Previous: [7. Undefined Branches](undefined-branches.md)  
-Next: [Appendix A. Creative Commons Attribution-ShareAlike 4.0 International](cc-by-sa-4.0.md)
+Next: [Appendix A. Examples](examples.md)
 
 Even though most of the time **Git** is used to track software, sometimes documents will also be kept under
 version control. (like this document)  

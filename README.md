@@ -1,7 +1,8 @@
 # t3m Git Branching System #
 
-[version_shield]: https://img.shields.io/badge/version-N%2FA-blue.svg
-![version: N/A][version_shield]
+[version_shield]: https://img.shields.io/badge/version-1.0.0--rc01-blue.svg
+[release_page]: https://github.com/mfederczuk/t3m/releases/tag/v1.0.0-rc01 "Release v1.0.0-rc01"
+[![version: 1.0.0-rc01][version_shield]][release_page]
 [![Changelog](https://img.shields.io/badge/-Changelog-blue.svg)](CHANGELOG.md "Changelog")
 
 ## About ##

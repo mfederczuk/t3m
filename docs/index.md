@@ -1,9 +1,7 @@
-<!-- TODO: release date -->
-
 # t3m v1.0.0-rc01 #
 
 This document is the official specification for the **t3m** **Git** branching system,
-version 1.0.0-rc01 (released {{DATE}}).
+version 1.0.0-rc01 (released 2021-05-17).
 
 ---
 

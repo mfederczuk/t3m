@@ -14,6 +14,13 @@ Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ---
 
+The key words "MUST", "MUST NOT", "REQUIRED", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this
+document are to be interpreted as described in [RFC 2119].
+
+[RFC 2119]: https://datatracker.ietf.org/doc/html/rfc2119
+
+---
+
 ## Abstract ##
 
 The general build-up of **t3m** is one master branch and several types of topic branches.

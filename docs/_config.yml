@@ -1,8 +1,0 @@
-plugins:
-  # specify this explicitly to fix https://github.com/benbalter/jekyll-titles-from-headings/issues/36
-  - jekyll-titles-from-headings
-
-relative_links:
-  collections: true
-
-theme: jekyll-theme-midnight

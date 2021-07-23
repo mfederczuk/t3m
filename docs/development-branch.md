@@ -32,7 +32,7 @@ not merged yet.
 
 When it is the first time in the current development phase that the development branch is created,
 then the first (and maybe only) component of the branch name MUST be `indev`.
-Otherwise the first component MUST be `develop`.  
+Otherwise the first component MUST be `develop` or `dev`.  
 The name MAY also contain additional components that are chosen by the repository owner or, if the owner allows it,
 by the creator of this instance of the development branch.  
 These additional components, and the complete name in its entirety, MUST still comply with the rules laid out in

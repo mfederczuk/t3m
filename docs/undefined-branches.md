@@ -6,7 +6,7 @@ Previous: [6. Parallel Versions Variant](parallel-versions-variant.md)
 Next: [8. Alternative Branch Names for Documents](alternative-document-branch-names.md)
 
 Undefined branches are branches that have no rules applied to them.  
-They may be used for any reason, in any way.
+They MAY be used for any reason, in any way.
 
 A branch is considered to be undefined if it isn't a previously described branch and if one of the following cases
 applies:

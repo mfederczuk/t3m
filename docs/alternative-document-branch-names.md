@@ -9,7 +9,7 @@ Even though most of the time **Git** is used to track software, sometimes docume
 version control. (like this document)  
 In this case, some of the original names of the branches (e.g.: `feature`, `indev`, ...) aren't as fitting.
 
-Because of this, there exists an assortment of alternative names that the owner of the repository may choose to use
+Because of this, there exists an assortment of alternative names that the owner of the repository MAY choose to use
 instead:
 
 |    Original     |          Alternative          | Defined in Section                                                         |
@@ -26,8 +26,8 @@ instead:
 |    `develop`    |    `develop` _(no change)_    | [5. Development Branch](development-branch.md)                             |
 |  `unreleased`   |  `unreleased` _(no change)_   | [6. Parallel Versions Variant](parallel-versions-variant.md)               |
 
-If the owner of the repository chooses to use the alternative names, then all of them must be used.  
-Just picking some of the alternative names and not using all of the must not be done.
+If the owner of the repository chooses to use the alternative names, then all of them MUST be used.  
+Just picking some of the alternative names and not using all of the MUST NOT be done.
 
 The [repository of the **t3m** specification] uses these alternative names.
 

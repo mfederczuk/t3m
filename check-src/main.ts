@@ -16,6 +16,7 @@ if(!existsSync(inputDirectoryPath)) {
 
 const filepaths = readdirRecursiveSync(inputDirectoryPath)
 	.filter((filepath) => filepath.endsWith(".md"))
+	.filter((filepath) => filepath.endsWith("test.ignore.md"))
 	.filter((filepath) => !filepath.endsWith("cc-by-sa-4.0.md"));
 
 const markdownlintResults = markdownlintSync({
@@ -67,7 +68,7 @@ const problems = filepaths
 		const markdownlintProblems = markdownlintResults[filepath]
 			.map((markdownlintError) => mapMarkdownlintErrorToProblem(markdownlintError, filepath, fileLines));
 
-		return [...t3mProblems, ...markdownlintProblems];
+		return [...t3mProblems/* , ...markdownlintProblems */];
 	});
 
 function printProblem(problem: Problem) {

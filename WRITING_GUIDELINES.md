@@ -46,7 +46,7 @@ If you think that the script reported something that isn't a violation or mistak
 * Do not use equal characters or dashes for headings, only use octothorpes (#)
 * Headings are formatted with octothorpes on both sides
 * No lines with just one or two dashes
-* Horizontal separators must have exactly three dashes
+* Horizontal separators must begin at column 1 and must consist exactly three dashes
 * Regular emphasis is formatted with one asterisk on both sides (*\*like this\**)
 * Strong emphasis is formatted with two asterisks on both sides (**\*\*like this\*\***)
 * Try to avoid regular emphasis / Use regular emphasis sparingly

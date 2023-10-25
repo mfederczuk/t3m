@@ -22,5 +22,5 @@ Read through the [t3m Contribution Guidelines](CONTRIBUTING.md) if you want to c
 
 ## License ##
 
-The **t3m** specification document is licensed under [CC BY-SA 4.0](licenses/CC-BY-SA-4.0.txt).  
+The **t3m** specification document is licensed under [**CC BY-SA 4.0**](licenses/CC-BY-SA-4.0.txt).  
 For more information about copying and licensing, see the [COPYING.txt](COPYING.txt) file.

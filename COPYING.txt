@@ -4,6 +4,7 @@ all other Markdown files, which are files whose names end with '.md', and the Gi
 
         Creative Commons Attribution Share Alike 4.0 International (licenses/CC-BY-SA-4.0.txt)
 
-All other files that do not match any of the before laid out rules are licensed under:
+All other files that do not match any of the before laid out rules, except the license files, which are all files
+located in the 'licenses' directory, are licensed under:
 
         GNU General Public License v3.0 or later (licenses/GNU-GPL-v3.0.txt)
